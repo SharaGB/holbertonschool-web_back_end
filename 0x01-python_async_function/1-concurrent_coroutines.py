@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Return the list of all delays """
 
 import asyncio
 
