@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Returns an asyncio Task  """
+""" Returns an asyncio Task """
 
 import asyncio
 
