@@ -2,7 +2,7 @@
 
 <div class="panel panel-default" id="project-description">
   <div class="panel-body">
-    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/4aeaa9c3cb1f316c05c4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230124%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20230124T142139Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d63d5fc9ab43068593d5c64dd0019e47853ee01259233d847c6721bebe28177c" alt="" loading="lazy" style=""></p>
+    <p><img src="https://user-images.githubusercontent.com/90220978/214405100-55dc2ca3-8bdd-4bb3-8227-5762a44efb6b.png" alt="" loading="lazy" style=""></p>
 
 <h2>Resources</h2>
 
