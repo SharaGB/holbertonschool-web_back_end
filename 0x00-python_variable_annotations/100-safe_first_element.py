@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Type-annotated function """
+""" Duck-typed annotations function """
 
 from typing import Sequence, Any, Union
 
