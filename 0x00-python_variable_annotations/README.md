@@ -17,7 +17,7 @@
 
 <h3>General</h3>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/0kx3ZdIopb6qMTq4TN-blw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <ul>
 <li>Type annotations in Python 3</li>
