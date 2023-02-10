@@ -11,16 +11,15 @@ class Auth():
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """ Determine if the path is in the excluded paths
         """
-        if path is None:
+        if excluded_paths is None or excluded_paths == []:
             return True
-        if excluded_paths is None or len(excluded_paths) == 0:
-            return True
-        for excluded_path in excluded_paths:
-            if excluded_path.endswith("*"):
-                if path.startswith(excluded_path[:-1]):
-                    return False
-            elif path == excluded_path:
+        for ex_path in excluded_paths:
+            if ex_path == path:
                 return False
+            if ex_path.endswith('*'):
+                pfx_path = ex_path[:-1]
+                if pfx_path in path:
+                    return False
         return True
 
     def authorization_header(self, request=None) -> str:
