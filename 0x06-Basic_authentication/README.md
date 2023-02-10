@@ -1,4 +1,4 @@
-#
+# Basic Authentication
 
 <div class="panel panel-default" id="project-description">
   <div class="panel-body">
@@ -8,7 +8,7 @@
 
 <p>In the industry, you should <strong>not</strong> implement your own Basic authentication system and use a module or framework that doing it for you (like in Python-Flask: <a href="https://flask-httpauth.readthedocs.io/en/latest/" title="Flask-HTTPAuth" target="_blank">Flask-HTTPAuth</a>). Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.</p>
 
-<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/5/6ccb363443a8f301bc2bc38d7a08e9650117de7c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230210%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20230210T213136Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a70617accb7454e197245dcac1a73cd37bfb5f5b4e411017c0a779d45300d501" alt="" loading="lazy" style=""></p>
+<p><img src="https://user-images.githubusercontent.com/90220978/218203707-156a721d-58fe-4456-9d4e-62c3900dcd61.png" alt="" loading="lazy" style=""></p>
 
 <h2>Resources</h2>
 
