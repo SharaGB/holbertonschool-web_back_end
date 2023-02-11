@@ -13,4 +13,4 @@ class BasicAuth(Auth):
             return None
         if authorization_header[:6] != 'Basic ':
             return None
-        return authorization_header[6:]
+        return authorization_header[6:(len(authorization_header))]
