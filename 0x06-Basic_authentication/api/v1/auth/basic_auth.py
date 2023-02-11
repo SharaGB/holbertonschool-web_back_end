@@ -2,6 +2,7 @@
 """ BasicAuth class module """
 from api.v1.auth.auth import Auth
 import base64
+from typing import Tuple
 
 
 class BasicAuth(Auth):
@@ -14,8 +15,8 @@ class BasicAuth(Auth):
             for a Basic Authentication
         """
         if authorization_header is None or \
-                type(authorization_header) is not str \
-                or authorization_header[:6] != 'Basic ':
+                type(authorization_header) is not str or \
+                authorization_header[:6] != 'Basic ':
             return None
         return authorization_header[6:]
 
@@ -31,3 +32,13 @@ class BasicAuth(Auth):
             return decode.decode('utf-8')
         except Exception:
             return None
+
+    def extract_user_credentials(
+            self, decoded_base64_authorization_header: str) -> Tuple[str, str]:
+        """ Return the user email and password from the Base64 decoded value
+        """
+        if decoded_base64_authorization_header is None or \
+                type(decoded_base64_authorization_header) is not str or \
+                ':' not in decoded_base64_authorization_header:
+            return None, None
+        return decoded_base64_authorization_header.split(':', 1)
