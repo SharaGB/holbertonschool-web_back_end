@@ -1,6 +1,6 @@
-#!/usr/bin/python 3
+#!/usr/bin/env python3
 """ Module of Session authentication views """
-from flask import abort, jsonify, request
+from flask import jsonify, request
 from api.v1.views import app_views
 from models.user import User
 from os import getenv
