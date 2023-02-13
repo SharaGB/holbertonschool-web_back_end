@@ -6,22 +6,18 @@
 
 <p>In this project, you will implement a <strong>Session Authentication</strong>. You are not allowed to install any other module.</p>
 
-<p>In the industry, you should <strong>not</strong> implement your own Session authentication system and use a module or framework that doing it for you (like in Python-Flask: <a href="/rltoken/qXRfnHdkAH61gmZbC2xGzw" title="Flask-HTTPAuth" target="_blank">Flask-HTTPAuth</a>). Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.</p>
+<p>In the industry, you should <strong>not</strong> implement your own Session authentication system and use a module or framework that doing it for you (like in Python-Flask: <a href="https://flask-httpauth.readthedocs.io/en/latest/" title="Flask-HTTPAuth" target="_blank">Flask-HTTPAuth</a>). Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.</p>
 
 <h2>Resources</h2>
 
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/2BkSCmFq5HYwztDCQuAwvg" title="REST API Authentication Mechanisms - Only the session auth part" target="_blank">REST API Authentication Mechanisms - Only the session auth part</a> </li>
-<li><a href="/rltoken/NMb6uXgVOVq0Tv7x_dbLEA" title="HTTP Cookie" target="_blank">HTTP Cookie</a> </li>
-<li><a href="/rltoken/D0AUceSjWti95ffW06MTHQ" title="Flask" target="_blank">Flask</a> </li>
-<li><a href="/rltoken/-TgSvgacXt556tD3bMFXcg" title="Flask Cookie" target="_blank">Flask Cookie</a> </li>
+<li><a href="https://www.youtube.com/watch?v=501dpx2IjGY&ab_channel=JavaBrains" title="REST API Authentication Mechanisms - Only the session auth part" target="_blank">REST API Authentication Mechanisms - Only the session auth part</a> </li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie" title="HTTP Cookie" target="_blank">HTTP Cookie</a> </li>
+<li><a href="https://palletsprojects.com/p/flask/" title="Flask" target="_blank">Flask</a> </li>
+<li><a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#cookies" title="Flask Cookie" target="_blank">Flask Cookie</a> </li>
 </ul>
-
-<h2>Learning Objectives</h2>
-
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/VwUGR-ylC9X9sBp-uI4TyA" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
