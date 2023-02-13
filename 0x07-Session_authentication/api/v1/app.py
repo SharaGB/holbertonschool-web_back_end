@@ -53,7 +53,7 @@ def before_request():
                       '/api/v1/forbidden/', 'api/v1/auth_session/login/']
     if auth is None:
         return
-    if not auth.require_auth(request.path, excluded_paths=excluded_paths):
+    if not auth.require_auth(request.path, excluded_paths):
         return
     if auth.authorization_header(request) is None and \
             auth.session_cookie(request) is None:
