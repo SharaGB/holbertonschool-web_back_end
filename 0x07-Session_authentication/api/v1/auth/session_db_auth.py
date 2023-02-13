@@ -2,6 +2,7 @@
 """ Session DB Auth class module """
 from api.v1.auth.session_exp_auth import SessionExpAuth
 from models.user_session import UserSession
+from datetime import datetime, timedelta
 
 
 class SessionDBAuth(SessionExpAuth):
@@ -30,10 +31,15 @@ class SessionDBAuth(SessionExpAuth):
         if user_session is None:
             return None
 
-        if not user_session:
+        user_session = user_session[0]
+
+        expired_time = user_session.created_at + \
+            timedelta(seconds=self.session_duration)
+
+        if expired_time < datetime.utcnow():
             return None
 
-        return user_session[0].user_id
+        return user_session.user_id
 
     def destroy_session(self, request=None):
         """ Deletes the user session / logout
