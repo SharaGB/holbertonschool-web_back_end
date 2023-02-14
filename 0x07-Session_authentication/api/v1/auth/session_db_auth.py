@@ -18,6 +18,7 @@ class SessionDBAuth(SessionExpAuth):
 
         user_session = UserSession(user_id=user_id, session_id=session_id)
         user_session.save()
+        UserSession.save_to_file()
 
         return session_id
 
@@ -27,6 +28,7 @@ class SessionDBAuth(SessionExpAuth):
         if session_id is None:
             return None
 
+        UserSession.load_from_file()
         user_session = UserSession.search({'session_id': session_id})
         if not user_session:
             return None
@@ -58,5 +60,6 @@ class SessionDBAuth(SessionExpAuth):
             return False
 
         user_session[0].remove()
+        UserSession.save_to_file()
 
         return True
