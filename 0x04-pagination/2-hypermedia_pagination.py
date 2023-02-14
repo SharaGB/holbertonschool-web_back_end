@@ -61,7 +61,7 @@ class Server:
         prev_page = page - 1 if page > 1 else None
         next_page = page + 1 if page < total_pages else None
 
-        hyper = {
+        return {
             'page_size': page_size,
             'page': page,
             'data': data,
@@ -69,5 +69,3 @@ class Server:
             'prev_page': prev_page,
             'total_pages': total_pages
         }
-
-        return hyper
