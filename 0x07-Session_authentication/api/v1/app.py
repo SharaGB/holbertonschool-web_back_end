@@ -9,6 +9,7 @@ from flask_cors import (CORS, cross_origin)
 import os
 
 app = Flask(__name__)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(app_views)
 CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 auth = None
@@ -55,26 +56,19 @@ def forbidden(error) -> str:
 def before_request():
     """ Before request handler
     """
+    excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/',
+                      '/api/v1/forbidden/', '/api/v1/auth_session/login/']
     if auth is None:
         return
-
-    excluded_paths = ['/api/v1/status/',
-                      '/api/v1/unauthorized/',
-                      '/api/v1/forbidden/',
-                      '/api/v1/auth_session/login/']
-
     if not auth.require_auth(request.path, excluded_paths):
         return
-
-    if auth.authorization_header(request) is None \
-            and auth.session_cookie(request) is None:
+    if auth.authorization_header(request) is None and \
+            auth.session_cookie(request) is None:
         abort(401)
-
-    current_user = auth.current_user(request)
-    if current_user is None:
+    if auth.current_user(request) is None:
         abort(403)
-
-    request.current_user = current_user
+    else:
+        request.current_user = auth.current_user(request)
 
 
 if __name__ == "__main__":
