@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Filter values in a log file """
+""" Filtered Logger module """
 import re
 from typing import List
 import logging
@@ -19,7 +19,7 @@ class RedactingFormatter(logging.Formatter):
         self.fields = fields
 
     def format(self, record: logging.LogRecord) -> str:
-        """ Filter values in incoming log records """
+        """ Filters values in incoming log records """
         return self.filter_datum(self.fields, self.REDACTION,
                                  super().format(record), self.SEPARATOR)
 
