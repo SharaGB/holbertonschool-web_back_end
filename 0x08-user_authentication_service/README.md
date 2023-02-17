@@ -2,8 +2,8 @@
 
 <div class="panel panel-default" id="project-description">
   <div class="panel-body">
-    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/4cb3c8c607afc1d1582d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230217%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20230217T165418Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4aed81173de573cdf1b009585337e92e026d8dd53ad08e28785ae3546bf424e9" alt="" loading="lazy" style=""></p>
-
+    <p><img src="https://user-images.githubusercontent.com/90220978/219814233-9d32e35c-dbdb-4258-a4ea-1a5df074161c.jpg" alt="" loading="lazy" style=""></p>
+    
 <p>In the industry, you should <strong>not</strong> implement your own authentication system and use a module or framework that doing it for you (like in Python-Flask: <a href="https://flask-user.readthedocs.io/en/latest/" title="Flask-User" target="_blank">Flask-User</a>). Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.</p>
 
 <h2>Resources</h2>
