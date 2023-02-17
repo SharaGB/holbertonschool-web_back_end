@@ -33,7 +33,7 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
-        """Add a new user to the database
+        """Add a user to the database
         """
         user = User(email=email, hashed_password=hashed_password)
         self._session.add(user)
@@ -50,3 +50,16 @@ class DB:
         if record is None:
             raise NoResultFound
         return record
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """Update a user
+        """
+        user_record = self.find_user_by(id=user_id)
+
+        for key, value in kwargs.items():
+            if hasattr(user_record, key):
+                setattr(user_record, key, value)
+            else:
+                raise ValueError
+
+        self._session.commit()
