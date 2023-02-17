@@ -45,9 +45,8 @@ class Auth:
         except NoResultFound:
             return False
         else:
-            return bcrypt.checkpw(
-                password=password.encode("utf-8"), hashed_password=user.hashed_password
-            )
+            return bcrypt.checkpw(password=password.encode("utf-8"),
+                                  hashed_password=user.hashed_password)
 
     def create_session(self, email: str) -> str:
         """returns the session ID as a string"""
