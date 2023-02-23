@@ -2,7 +2,7 @@
 
 <div class="panel panel-default" id="project-description">
   <div class="panel-body">
-    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/1/f088970b450e82c881ea.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230223%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20230223T014439Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bea68a8b830533451fb69f93a268dfc600673b104496ef0bb1314bf71a141c57" alt="" loading="lazy" style=""></p>
+    <p><img src="https://user-images.githubusercontent.com/90220978/220804463-d4dc50e9-6572-403d-a690-f5827d7174e2.gif" alt="" loading="lazy" style=""></p>
 
 <p>Unit testing is the process of testing that a particular function returns expected results
 for different set of inputs. A unit test is supposed to test standard inputs and corner cases. A unit test should only test the logic defined inside the tested function. Most calls to additional functions should be mocked, especially if they make network or database calls.</p>
