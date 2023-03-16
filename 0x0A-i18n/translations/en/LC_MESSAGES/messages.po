@@ -26,10 +26,12 @@ msgstr "Welcome to Holberton"
 msgid "%(home_header)"
 msgstr "Hello world!"
 
-#: templates/5-index.html:11
+#: templates/5-index.html:11 templates/6-index.html:11
+#: templates/7-index.html:11 templates/index.html:11
 msgid "logged_in_as"
 msgstr "You are logged in as %(username)s."
 
-#: templates/5-index.html:13
+#: templates/5-index.html:13 templates/6-index.html:13
+#: templates/7-index.html:13 templates/index.html:13
 msgid "not_logged_in"
 msgstr "You are not logged in."
