@@ -331,4 +331,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Dependencies
+/node_modules
+node_modules
+
 # End of https://www.toptal.com/developers/gitignore/api/python,windows,linux,macos,flask
