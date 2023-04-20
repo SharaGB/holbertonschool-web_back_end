@@ -1,5 +1,5 @@
 -- SQL script that creates a table users
--- script can be executed on any database
+-- Script can be executed on any database
 
 CREATE TABLE
     If NOT EXISTS `users` (
