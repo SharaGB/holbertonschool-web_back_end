@@ -25,9 +25,8 @@ const countStudents = (aPath) => new Promise((resolve, reject) => {
     }
     for (const course in courses) {
       if (course) {
-        msg = `Number of students in ${course}: ${
-          courses[course].length
-        }. List: ${courses[course].join(', ')}`;
+        msg = `Number of students in ${course}: ${courses[course].length
+          }. List: ${courses[course].join(', ')}`;
 
         console.log(msg);
         response.push(msg);
