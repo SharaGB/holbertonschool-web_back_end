@@ -6,7 +6,6 @@ export default function createIteratorObject(report) {
       workers.push(employe);
     }
   }
-  /* eslint-enable no-unused-vars */
 
   return workers;
 }
