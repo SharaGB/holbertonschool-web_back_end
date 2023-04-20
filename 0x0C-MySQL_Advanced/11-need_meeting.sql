@@ -3,11 +3,9 @@
 
 DROP VIEW IF EXISTS need_meeting;
 
-CREATE VIEW NEED_MEETING AS 
-	SELECT name
-	FROM students
-	WHERE
-	    score < 80
-	    AND last_meeting is NULL
-	    OR last_meeting < DATE_SUB(NOW(), INTERVAL 1 MONTH);
-; 
+CREATE VIEW need_meeting AS
+SELECT name
+FROM students
+WHERE SCORE < 80
+AND last_meeting IS NULL
+OR last_meeting < DATE_SUB(NOW(), INTERVAL 1 MONTH);
