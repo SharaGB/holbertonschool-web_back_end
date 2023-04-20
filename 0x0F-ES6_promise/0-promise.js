@@ -1,4 +1,4 @@
-/* Promise need a function to work */
+/* promise need a function to work */
 export default function getResponseFromAPI() {
-    return new Promise(() => { });
+  return new Promise(() => { });
 }
