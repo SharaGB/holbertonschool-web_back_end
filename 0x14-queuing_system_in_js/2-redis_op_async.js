@@ -13,12 +13,12 @@ client.on("ready", () => {
 
 const setNewSchool = (schoolName, value) => {
   client.set(schoolName, value, (err, reply) => {
-      redis.print(`Reply: ${reply}`);
+    redis.print(`Reply: ${reply}`);
   });
 };
 
 const displaySchoolValue = async (schoolName) => {
-  const value =  await getAsync(schoolName)
+  const value = await getAsync(schoolName)
   console.log(value);
 };
 

@@ -11,13 +11,13 @@ client.on("ready", () => {
 
 const setNewSchool = (schoolName, value) => {
   client.set(schoolName, value, (err, reply) => {
-      redis.print(`Reply: ${reply}`);
+    redis.print(`Reply: ${reply}`);
   });
 };
 
 const displaySchoolValue = (schoolName) => {
   client.get(schoolName, (err, reply) => {
-      console.log(reply);
+    console.log(reply);
   });
 };
 

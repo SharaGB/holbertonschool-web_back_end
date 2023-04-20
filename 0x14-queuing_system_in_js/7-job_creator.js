@@ -1,5 +1,5 @@
 const kue = require('kue');
-const jobs =  [{
+const jobs = [{
   phoneNumber: '4153518780',
   message: 'This is the code 1234 to verify your account'
 },
@@ -47,7 +47,7 @@ const jobs =  [{
 const queue = kue.createQueue();
 jobs.forEach(element => {
   const job = queue.create('push_notification_code_2', element).save((err) => {
-    if(!err) console.log(`Notification job created: ${job.id}`);
+    if (!err) console.log(`Notification job created: ${job.id}`);
   });
 
   job.on('complete', (result) => {
@@ -57,7 +57,7 @@ jobs.forEach(element => {
   job.on('failed', (failed) => {
     console.log(`Notification job ${job.id} failed: ${failed}`);
   });
-  
+
   job.on('progress', (progress, data) => {
     console.log(`Notification job ${job.id} ${progress}% complete`);
   });
