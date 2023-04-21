@@ -16,10 +16,10 @@ if __name__ == "__main__":
     number_status = nginx_collection.find(
         {"method": "GET", "path": "/status"}).count()
     number_ips = nginx_collection.aggregate([
-            {"$group": {"_id": "$ip", "total": {"$sum": 1}}},
-            {"$sort": {"total": -1}},
-            {"$limit": 10}
-        ])
+        {"$group": {"_id": "$ip", "total": {"$sum": 1}}},
+        {"$sort": {"total": -1}},
+        {"$limit": 10}
+    ])
 
     print("{} logs".format(number))
     print("Methods:")
