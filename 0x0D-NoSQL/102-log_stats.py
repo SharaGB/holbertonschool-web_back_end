@@ -1,34 +1,37 @@
 #!/usr/bin/env python3
-"""
-Where can I learn Python?
-"""
+""" Log ngnix """
 from pymongo import MongoClient
 
+
 if __name__ == "__main__":
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     client = MongoClient('mongodb://127.0.0.1:27017')
-    nginx_collection = client.logs.nginx
-    number = nginx_collection.count()
-    number_get = nginx_collection.find({"method": "GET"}).count()
-    number_post = nginx_collection.find({"method": "POST"}).count()
-    number_put = nginx_collection.find({"method": "PUT"}).count()
-    number_patch = nginx_collection.find({"method": "PATCH"}).count()
-    number_delete = nginx_collection.find({"method": "DELETE"}).count()
-    number_status = nginx_collection.find(
-        {"method": "GET", "path": "/status"}).count()
-    number_ips = nginx_collection.aggregate([
-        {"$group": {"_id": "$ip", "total": {"$sum": 1}}},
-        {"$sort": {"total": -1}},
-        {"$limit": 10}
+    logs = client.logs.nginx
+    print(str(logs.count_documents({})) + " logs")
+
+    print("Methods:")
+    for method in methods:
+        count_method = logs.count_documents({'method': method})
+        print('\tmethod ' + method + ': ' + str(count_method))
+
+    print("{} status check".format(logs.count_documents({"path": "/status"})))
+
+    ips = logs.aggregate([
+        {'$group':
+            {
+                '_id': '$ip',
+                'count': {'$sum': 1}
+            }
+         },
+        {'$sort': {'count': -1}},
+        {'$limit': 10},
+        {'$project': {
+            '_id': 0,
+            'ip': '$_id',
+            'count': 1
+        }}
     ])
 
-    print("{} logs".format(number))
-    print("Methods:")
-    print("\tmethod GET: {}".format(number_get))
-    print("\tmethod POST: {}".format(number_post))
-    print("\tmethod PUT: {}".format(number_put))
-    print("\tmethod PATCH: {}".format(number_patch))
-    print("\tmethod DELETE: {}".format(number_delete))
-    print("{} status check".format(number_status))
-    print("IPs:")
-    for ips in number_ips:
-        print("\t{}: {}".format(ips.get("_id"), ips.get("total")))
+    print('IPs:')
+    for ip in ips:
+        print('\t' + ip.get('ip') + ': ' + str(ip.get('count')))
